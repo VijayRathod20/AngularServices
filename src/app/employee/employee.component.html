@@ -1,0 +1,17 @@
+<h1>Employee Details</h1>
+<form #frm="ngForm" (ngSubmit)="updateInfo(frm)">
+    <div class="">
+        <input type="text" name="city" value="" placeholder="Enter City" ngModel>
+        <button type="submit" name="btn">Add Info</button>
+    </div>
+</form>
+<br>
+
+<button type="button" name="btn" (click)="getInfoFromService1()">Employee1</button>
+<ul class="list-group">
+    <li *ngFor="let info of infoRecieved1" class="list-group-info">{{info}}</li>
+</ul>
+<button type="button" name="btn" (click)="getInfoFromService2()">Employee1</button>
+<ul class="list-group">
+    <li *ngFor="let info of infoRecieved2" class="list-group-info">{{info}}</li>
+</ul>
